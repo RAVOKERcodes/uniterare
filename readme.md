@@ -5,17 +5,23 @@
 - Python 3.7+
 - PostgreSQL database
 - Groq API key (for AI-powered features)
+- Node.js and npm (for frontend development)
+- Git (for version control)
 
 ## Installation
 
-Install the required packages:
+1. Install the required packages for backend:
 ```bash
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
+```
+2. Install the required packages for frontend:
+```bash
+npm install
 ```
 
 ## Configuration
 
-Create a `.env` file in the project root directory with the following variables:
+Create a `backend/.env` file in the project root directory with the following variables:
 
 ```env
 # Database Configuration
@@ -37,13 +43,13 @@ max_workers=5
 1. Create a new PostgreSQL database
 2. Run the database initialization script:
    ```bash
-   python3 dbscript.py
+   python3 backend/dbscript.py
    ```
    This will create the necessary tables and load initial data.
 
 3. Run the FDA drugs database initialization script:
    ```bash
-   python3 dbscript_FDA_drugs.py
+   python3 backend/dbscript_FDA_drugs.py
    ```
    This will create the necessary tables and load initial data.
 
@@ -52,31 +58,35 @@ max_workers=5
 ### Option 1: Single-threaded Loading
 For smaller datasets or testing:
 ```bash
-python3 single_data_loader.py
+python3 backend/single_data_loader.py
 ```
 
 ### Option 2: Multi-threaded Loading
 For faster loading of large datasets:
 ```bash
-python3 multi_thread_loader.py
+python3 backend/multi_thread_loader.py
 ```
 
 ## Running the Application
 
-Start the Flask backend:
+1. Start the Flask backend:
 ```bash
-python3 rare_disease.py
+python3 backend/rare_disease.py
+```
+2. Start the frontend development server:
+```bash
+npm run dev
 ```
 
 ## Project Structure
 
-- `rare_disease.py` - Main Flask application
-- `dbscript.py` - Database initialization script
-- `dbscript_FDA_drugs.py` - Database initialization script for FDA drugs
-- `single_data_loader.py` - Single-threaded data loader
-- `multi_thread_loader.py` - Multi-threaded data loader
-- `nord_rare_disease_database_export.csv` - Sample disease data
-- `requirements.txt` - Project dependencies
+- `backend/rare_disease.py` - Main Flask application
+- `backend/dbscript.py` - Database initialization script
+- `backend/dbscript_FDA_drugs.py` - Database initialization script for FDA drugs
+- `backend/single_data_loader.py` - Single-threaded data loader
+- `backend/multi_thread_loader.py` - Multi-threaded data loader
+- `backend/nord_rare_disease_database_export.csv` - Sample disease data
+- `backend/requirements.txt` - Project dependencies
 
 ## Environment Variables
 

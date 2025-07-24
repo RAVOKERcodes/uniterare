@@ -1,4 +1,5 @@
-.env
+backend/.env
+frontend/.env
 __pycache__
 disease_search.log
 debug_search.html
@@ -6,21 +7,27 @@ debug_comprehensive.html
 api_flow_test_app.log
 api_flow_test_app.py
 
-# Rare Diseases
-# nord_rare_disease_database_export.csv
+# Logs
+logs
+*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
 
-# FDA Drugs
-# Products.txt
-# Applications.txt
-Products_cleaned.txt
-Applications_cleaned.txt
-bad_rows.log
-ActionTypes_Lookup.txt
-ApplicationsDocsType_Lookup.txt
-MarketingStatus_Lookup.txt
-MarketingStatus.txt
-ApplicationDocs.txt
-SubmissionClass_Lookup.txt
-TE.txt
-Submissions.txt
-SubmissionPropertyType.txt.env
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+frontend/.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
