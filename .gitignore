@@ -6,7 +6,8 @@ debug_search.html
 debug_comprehensive.html
 api_flow_test_app.log
 api_flow_test_app.py
-
+backend/venv
+backend/app/patient_data
 # Logs
 logs
 *.log
