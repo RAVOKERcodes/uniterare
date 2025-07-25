@@ -27,7 +27,7 @@ export const DrugSearch = ({ onBack }: DrugSearchProps) => {
   const [results, setResults] = useState<DrugResult | null>(null);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [backendUrl, setBackendUrl] = useState("http://localhost:5000");
+  const [backendUrl, setBackendUrl] = useState("http://127.0.0.1:8000");
   const [showConfig, setShowConfig] = useState(false);
   const { toast } = useToast();
 
@@ -153,7 +153,7 @@ export const DrugSearch = ({ onBack }: DrugSearchProps) => {
             <CardContent>
               <div className="flex gap-4">
                 <Input
-                  placeholder="Backend URL (e.g., http://localhost:5000)"
+                  placeholder="Backend URL (e.g., http://127.0.0.1:8000)"
                   value={backendUrl}
                   onChange={(e) => setBackendUrl(e.target.value)}
                   className="flex-1"

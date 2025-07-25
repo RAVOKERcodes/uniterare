@@ -232,7 +232,7 @@ export const DiagnosticTool = ({ onBack }: DiagnosticToolProps) => {
         other_conditions: answers.other_conditions || "None"
       };
 
-      const response = await fetch('http://localhost:5000/api/diagnose', {
+      const response = await fetch('http://127.0.0.1:8000/api/diagnose', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
